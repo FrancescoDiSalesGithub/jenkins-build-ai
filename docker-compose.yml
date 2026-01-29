@@ -1,0 +1,37 @@
+version: '3'
+services:
+
+  jenkins:
+    container_name: jenkins
+    image: jenkins-docker
+    networks:
+      mynet:
+        aliases:
+          - jenkins
+    ports:
+      - "8080:8080"
+
+  nexus:
+    container_name: nexus
+    image: sonatype/nexus3
+    networks:
+      mynet:
+        aliases: 
+         - nexus
+    ports:
+      - "8081:8081"
+
+  ollama:
+    image: ollamaserver
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    networks:
+      mynet:
+        aliases:
+          - ollama
+
+
+networks:
+  mynet:
+    driver: bridge 
