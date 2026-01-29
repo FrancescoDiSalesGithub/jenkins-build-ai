@@ -3,7 +3,7 @@ services:
 
   jenkins:
     container_name: jenkins
-    image: jenkins-docker
+    image: jenkins/jenkins
     networks:
       mynet:
         aliases:
