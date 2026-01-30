@@ -4,6 +4,7 @@ main project of jenkins mini project
 # Summary
 
 * Overview of the infrastructure
+* How the pipe works
 
 # Overview of the infrastructure
 
