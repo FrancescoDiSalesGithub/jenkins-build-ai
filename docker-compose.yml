@@ -11,15 +11,6 @@ services:
     ports:
       - "8080:8080"
 
-  nexus:
-    container_name: nexus
-    image: sonatype/nexus3
-    networks:
-      mynet:
-        aliases: 
-         - nexus
-    ports:
-      - "8081:8081"
 
   ollama:
     image: ollamaserver
